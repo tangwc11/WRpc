@@ -1,0 +1,16 @@
+#spring:
+#  application:
+#    name: wrpc
+#
+#  redis:
+#    host: localhost
+#    port: 6379
+#
+#
+### wrpc配置
+#wrpc:
+#  service:
+#    name: Test-Service
+#  server:
+#    host: localhost
+#    port: 10001

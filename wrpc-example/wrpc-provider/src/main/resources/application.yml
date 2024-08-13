@@ -1,0 +1,25 @@
+
+# redis作为默认注册中心
+spring:
+  redis:
+    host: localhost
+    port: 6379
+
+## wrpc 服务提供方 配置
+wrpc:
+  service:
+    name: Test-Service
+  server:
+#    服务暴露地址
+    host: localhost
+    port: 10001
+
+
+logging:
+  level:
+    com.wentry: debug
+    com.example: debug
+
+
+server:
+  port: 8088

@@ -1,0 +1,26 @@
+# redis作为默认注册中心
+spring:
+  redis:
+    host: localhost
+    port: 6379
+
+## wrpc 服务消费方 配置
+wrpc:
+  service:
+#    指定消费的哪个服务，从注册中心去找
+    name: Test-Service
+  client:
+    services: [
+#    消费哪些服务，再通过ProxyFactory获取实例
+      "com.example.service.SayService",
+      "com.example.service.DrinkService"
+    ]
+
+server:
+  port: 8089
+
+
+logging:
+  level:
+    com.wentry: debug
+    com.example: debug
